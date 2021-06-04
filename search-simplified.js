@@ -20,7 +20,7 @@ function app(opts) {
   search.addWidgets([
     instantsearch.widgets.searchBox({
       container: '#search-input',
-      placeholder: 'Search professional experience',
+      placeholder: 'Explore professional experience',
     }),
     instantsearch.widgets.hits({
       container: '#hits',

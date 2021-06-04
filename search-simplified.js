@@ -4,6 +4,7 @@ app({
   appId: '7O9Y5G0LMW',
   apiKey: '2d64292d403e04ab8600d563cf4f1984',
   indexName: 'MarkV_David_Wild_CV',
+  indexName2: 'ApplicationExperience',
   searchParameters: {
     hitsPerPage: 10,
   },
@@ -37,15 +38,11 @@ function app(opts) {
       items: [
         {
           value: opts.indexName,
-          label: 'Most MarkV_David_Wild_CV',
+          label: 'MarkV_David_Wild_CV',
         },
         {
-          value: `${opts.indexName}_price_asc`,
-          label: 'Lowest price',
-        },
-        {
-          value: `${opts.indexName}_price_desc`,
-          label: 'Highest price',
+          value: opts.indexName2,
+          label: 'ApplicationExperience',
         },
       ],
     }),
@@ -76,10 +73,10 @@ function app(opts) {
       },
     }),
     instantsearch.widgets.rangeSlider({
-      container: '#price',
+      container: '#year',
       attribute: 'CONCLUDE YEAR',
       templates: {
-        header: getHeader('Price'),
+        header: getHeader('Year'),
       },
     }),
     instantsearch.widgets.refinementList({

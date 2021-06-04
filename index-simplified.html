@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+  <title>Instant Search Tutorial</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <!-- IE < 10 support -->
+  <!--[if lte IE 9]>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.2/themes/reset-min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="https://res.cloudinary.com/hilnmyskv/image/upload/c_fit,w_32,h_32/algolia-mark.ico" />
+</head>
+<body>
+
+  <!-- INTERFACE -->
+  <header>
+    <a href="."><img src="./assets/img/instant_search_logo@2x.png"/></a>
+    <div id="search-input"></div>
+  </header>
+
+  <main>
+    <div id="left-column">
+      <div id="price" class="facet"></div>
+      <div id="cvtype" class="facet"></div>
+      <div id="category" class="facet"></div>
+      <div id="type" class="facet"></div>
+    </div>
+
+    <div id="right-column">
+      <div id="sort-by-wrapper"><span id="sort-by"></span></div>
+      <div id="stats"></div>
+      <div id="hits"></div>
+      <div id="pagination"></div>
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://linkedin.com/yourwild">David Wild LinkedIN</a>
+  </footer>
+  <!-- /INTERFACE -->
+
+  <!-- TEMPLATES -->
+  <script type="text/html" id="hit-template">
+    <div class="hit">
+      <div class="hit-image">
+        <img src="{{Company Image}}" alt="{{COMPANY}}">
+      </div>
+      <div class="hit-content">
+        <h3 class="hit-price">{{CONCLUDE YEAR}}</h3>
+        <h3 class="hit-CVPosition">{{POSITION}}</h3>
+        <h4 class="hit-description">{{DESCRIPTION}}</h4>
+        <h5 class="hit-description">{{CATEGORY}}</h5>
+        <h5 class="hit-description">{{LOCATION}}</h5>
+        <h5 class="hit-description">{{Activity_Impact_Category}}</h5>
+        <h2 class="hit-name">{{{_highlightResult.name.value}}}</h2>
+        <p class="hit-description">{{{_highlightResult.description.value}}}</p>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/html" id="no-results-template">
+    <div id="no-results-message">
+      <p>We didn't find any results for the search <em>"{{query}}"</em>.</p>
+      <a href="." class='clear-all'>Clear search</a>
+    </div>
+  </script>
+  <!-- /TEMPLATES -->
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.0.3/dist/algoliasearch-lite.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.7.0/dist/instantsearch.production.min.js"></script>
+  <script src="search-simplified.js"></script>
+  <!-- /SCRIPTS -->
+
+</body>
+</html>

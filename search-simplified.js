@@ -38,11 +38,11 @@ function app(opts) {
       items: [
         {
           value: opts.indexName,
-          label: 'MarkV_David_Wild_CV',
+          label: 'Work',
         },
         {
           value: opts.indexName2,
-          label: 'ApplicationExperience',
+          label: 'Application',
         },
       ],
     }),

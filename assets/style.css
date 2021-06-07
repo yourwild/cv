@@ -17,13 +17,29 @@ footer {
 main {
   min-height: 360px;
 }
+#col-head-section-title{
+  font-weight: bold;
+  font-stretch: expanded;
+  font-style:italic;
+  background-color: #999;
+  text-align: center;
+  column-fill: balance;
+}
+#col-head-title-cell{
+  text-align: center;
+  column-fill: balance;
+  font-weight: bold;
+
+}
 #left-column {
   float: left;
-  width: 23%;
+  width: 30%;
+  border: 1px solid purple;
+  padding: 20px;
 }
 #right-column {
-  width: 74%;
-  margin-left: 26%;
+  width: 70%;
+  margin-left: 35%;
 }
 
 .clear:after {
@@ -428,6 +444,7 @@ a.clear-all:hover {
 /* SLIDER */
 .ais-RangeSlider .rheostat-progress {
   background-color: #731fd3;
+  padding: 10px;
 }
 
 .rheostat-handle {

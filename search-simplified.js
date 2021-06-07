@@ -59,6 +59,14 @@ function app(opts) {
       },
     }),
     instantsearch.widgets.refinementList({
+      container: '#Company',
+      attribute: 'COMPANY',
+      operator: 'or',
+      templates: {
+        header: getHeader('Company'),
+      },
+    }),
+    instantsearch.widgets.refinementList({
       container: '#cvtype',
       attribute: 'CV_Type',
       operator: 'or',
